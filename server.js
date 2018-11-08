@@ -12,12 +12,12 @@ app.use(express.static("public"));
 
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true}));
-app.use(epress.json());
+app.use(express.json());
 
 // Set Handlebars
 var exphbs = require("express-handlebars");
 
-app.engine("hanldebars", exphbs({ defaultLayout: "main" }));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them

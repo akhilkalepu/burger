@@ -49,7 +49,7 @@ var orm = {
         var queryString = "INSERT INTO " + table;
         queryString += " (";
         queryString += cols.toString();
-        queryString +=") ";
+        queryString += ") ";
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
@@ -88,7 +88,7 @@ var orm = {
         queryString += " WHERE ";
         queryString += condition;
 
-        connection.query(querystring, function(err, result) {
+        connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }

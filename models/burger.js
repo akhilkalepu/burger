@@ -12,7 +12,7 @@ var burger = {
         });
     },
     update: function(objColVals, condition, cb) {
-        orm.update("burgers", objColVals, condition, function (res) {
+        orm.update("burgers", objColVals, condition, function(res) {
             cb(res);
         });
     },
@@ -23,6 +23,6 @@ var burger = {
     }
 };
 
-// Export ORM object for model (burger.js)
+// Export database for the controller
 // =============================================================
 module.exports = burger;

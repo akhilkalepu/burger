@@ -5,7 +5,7 @@
 <ul>
     {{#each burgers}}
         {{#unless devoured}}
-            {{> cats/cat-block sleep=true}}
+            {{> burgers/burger-block devoured=false}}
         {{/unless}}
     {{/each}}
 </ul>
@@ -15,18 +15,19 @@
 <ul>
     {{#each burgers}}
         {{#if devoured}}
-            {{> cats/cat-block sleep=false}}
+            {{> burgers/burger-block devoured=true}}
         {{/if}}
     {{/each}}
 </ul>
 
 <h2>Make a burger</h2>
-<form action="create-form">
 
-    <div class="form-group">
-        <input type="text" id="burger_name" name="name">
+<form class="create-form">
+
+    <div class="form-group" id="burgerform">
+        <input type="text" for="burg" id="burg" name="name">
     </div>
 
-    <button type="submit">Add burger</button>
+    <button type="submit" id="addburger">Add burger</button>
 
 </form>
